@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Tsereteli</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: #fff;
+    }
+
+    /* Main content */
+    #content {
+      height: 100%;
+    }
+
+    #intro {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 100px 0;
+    }
+
+
+    #intro h1,
+    #intro p {
+      color: #fff;
+    }
+
+
+
+    /* Vanta.js rings background */
+    #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+
+    .container {
+   width: 100%;
+  overflow-x: auto;
+}
+
+.scroll-wrapper {
+  display: flex;
+}
+
+.scroll-item {
+  width: 200px;
+  height: 200px;
+  background-color: #f2f2f2;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.scroll-item:last-child {
+  margin-right: 0;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-text {
+  color: #a2a2a2;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6ff0088;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f9f9f9;
+}
+
+.show {
+  display: block;
+}
+
+#content {
+      position: relative;
+      z-index: 1;
+      padding: 100px 0;
+    }
+
+    #projects {
+      padding: 50px 0;
+    }
+
+    #projects h2 {  
+      color: #fff;
+    }
+
+    .card {
+    background-color: #333333c9;
+    color: #fff;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .card.animation {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .btn-animated {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 1;
+  }
+
+  .btn-animated::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: height 0.3s;
+    z-index: -1;
+  }
+
+  .btn-animated:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-animated:hover::before {
+    height: 100%;
+  }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">David Tsereteli</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+          <div class="dropdown">
+            <div class="dropdown-text">hobbies</div>
+            <div class="dropdown-content">
+              <a href="Astrophysics.html">Astrophysics</a>
+              <a href="Physics.html">Physics</a>
+              <a href="Programming.html">programming</a>
+               <a href="3D modeling.html">3D modeling</a>
+               <a href="Design.html">Design</a>
+               <a href="Math.html">Math</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="intro.html">Intro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Contact.html">Contact</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="Blog.html">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div id="background"></div>
+  <br>
+  <br> 
+  <br> 
+  <br>
+  <br>
+  <div id="content">
+    <section id="intro">
+      <div class="container text-center">
+        <h1 style="float: left;">Welcome to My Portfolio</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p style="text-align: justify;">
+          Hello, my name is David, and I'm a 16-year-old boy from Georgia. I am passionate about exploring the fascinating worlds of physics and astronomy, as well as expressing my creativity through programming, 3D modeling, and graphic design. In this portfolio, I would like to showcase my skills, projects, and accomplishments in these diverse fields. Let's dive into the exciting realm of science and design!
+        </p>
+      </div>
+    </section>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Research</h5>
+              <p class="card-text">Unraveling the Mysteries of Stellar Evolution: 
+                        A Comprehensive Investigation of the Cosmos              </p>
+              <a href="Astrophysics.html">
+                <button class="btn btn-primary btn-animated">Learn more</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Project 2</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#">
+                <button class="btn btn-primary btn-animated">Learn more</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Project 3</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#">
+                <button class="btn btn-primary btn-animated">Learn more</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://www.vantajs.com/dist/vanta.rings.min.js"></script>
+  <script>
+    // Initialize Vanta.js background
+    VANTA.RINGS({
+      el: "#background",
+      color: 0x00ffff,
+      backgroundColor: 0x000000,
+      quantity: 3,
+      size: 1.5,
+      speed: 1.5,
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+  var dropdownText = document.querySelector(".dropdown-text");
+  var dropdownContent = document.querySelector(".dropdown-content");
+
+  dropdownText.addEventListener("click", function() {
+    dropdownContent.classList.toggle("show");
+  });
+
+  window.addEventListener("click", function(event) {
+    if (!event.target.matches(".dropdown-text")) {
+      if (dropdownContent.classList.contains("show")) {
+        dropdownContent.classList.remove("show");
+      }
+    }
+  });
+});
+
+window.addEventListener("scroll", function() {
+    var cards = document.getElementsByClassName("card");
+    var windowHeight = window.innerHeight;
+
+    for (var i = 0; i < cards.length; i++) {
+      var cardPosition = cards[i].getBoundingClientRect().top;
+
+      if (cardPosition < windowHeight) {
+        cards[i].classList.add("animation");
+      }
+    }
+  });
+  </script>
+</body>
+</html>
